@@ -1,5 +1,4 @@
 import { FormIt, WSM } from 'https://ideook.github.io/SharedPluginUtilities/FormIt.mod.js';
-import { PluginUtils } from 'https://ideook.github.io/SharedPluginUtilities/FormItPluginUtils.js';
 
 export class CreateBlockButton extends HTMLElement {
     constructor() {
@@ -23,9 +22,9 @@ export class CreateBlockButton extends HTMLElement {
         this.blockID = await WSM.APICreateBlock(this.histID, await pt1, await pt2);
     }
 
-    async width() { return PluginUtils.currentUnits(this.numFromElem("width")); }
-    async height() { return PluginUtils.currentUnits(this.numFromElem("height")); }
-    async length() { return PluginUtils.currentUnits(this.numFromElem("length")); }
+    async width() { return FormIt.PluginUtils.currentUnits(this.numFromElem("width")); }
+    async height() { return FormIt.PluginUtils.currentUnits(this.numFromElem("height")); }
+    async length() { return FormIt.PluginUtils.currentUnits(this.numFromElem("length")); }
 
     numFromElem(id) {
         const elem = document.querySelector(this.getAttribute(id));
