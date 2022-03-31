@@ -1,5 +1,5 @@
 import { FormIt, WSM } from 'https://ideook.github.io/SharedPluginUtilities/FormIt.mod.js';
-import { PluginUtils } from 'https://ideook.github.io/SharedPluginUtilities/FormItPluginUtils.js';
+import { FormIt, PluginUtils } from 'https://ideook.github.io/SharedPluginUtilities/FormItPluginUtils.js';
 
 export class CreateBlockButton extends HTMLElement {
     constructor() {
